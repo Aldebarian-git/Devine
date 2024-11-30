@@ -16,13 +16,13 @@ body {
   background-color: rgb(250, 250, 238);
   position: relative;
   overflow: hidden;
-  background: url("/Assets/gif\ japan.gif") no-repeat center center;
+  background: url("../Devine/Assets/gif\ japan.gif") no-repeat center center;
   background-size: cover;
 }
 
 @font-face {
   font-family: "Annie";
-  src: url("Assets/Annie_Use_Your_Telescope/AnnieUseYourTelescope-Regular.ttf")
+  src: url("../Devine/Assets/Annie_Use_Your_Telescope/AnnieUseYourTelescope-Regular.ttf")
     format("truetype");
   font-weight: normal;
   font-style: normal;
@@ -30,14 +30,14 @@ body {
 
 @font-face {
   font-family: "Licorice";
-  src: url("Assets/Licorice/Licorice-Regular.ttf") format("truetype");
+  src: url("../Devine/Assets/Licorice/Licorice-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Marker";
-  src: url("Assets/Permanent_Marker/PermanentMarker-Regular.ttf")
+  src: url("../Devine/Assets/Permanent_Marker/PermanentMarker-Regular.ttf")
     format("truetype");
   font-weight: normal;
   font-style: normal;
@@ -92,7 +92,7 @@ body {
 .sushi {
   height: 35vh;
   width: 35vh;
-  background: url("/Assets/Sushi2.png") no-repeat center center;
+  background: url("../Devine/Assets/Sushi2.png") no-repeat center center;
   background-size: contain;
   animation: agrandissement 10s infinite ease-in-out;
   position: absolute;
@@ -138,7 +138,7 @@ body {
 }
 
 .lampion {
-  background: url(/Assets/lampion2.png) center/cover;
+  background: url(../Devine/Assets/lampion2.png) center/cover;
   width: 20vh;
   height: 20vh;
   z-index: 1000;
