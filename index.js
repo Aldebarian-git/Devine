@@ -50,7 +50,7 @@ const ButtonClick = () => {
     step++;
   } else if (step === 3) {
     bulle.textContent =
-      "Je vais penser TRES fort à un chiffre entre 0 et 100, et tu vas devoir le deviner. Tu es pret?";
+      "Je vais penser très fort à un chiffre/nombre entre 0 et 100, et tu vas devoir le deviner. Tu es pret?";
     button.textContent = "Carrement !";
     step++;
   } else if (step === 4) {
@@ -77,11 +77,9 @@ const ButtonClick = () => {
       answerPlayer.focus();
     }
     if (parseInt(answerValue) != nb_mystère) {
-      // Vérifiez si `bulleContainer` existe avant d'ajouter la classe
       if (bulleContainer) {
         bulleContainer.classList.add("shake");
-
-        // Retirer la classe après 500 ms (durée de l'animation CSS)
+        // Retirer la classe après 500 ms (durée de l'animation sur le CSS)
         setTimeout(() => {
           bulleContainer.classList.remove("shake");
         }, 500);
@@ -109,7 +107,7 @@ const ButtonClick = () => {
     button.textContent = "Oh oui !";
     nb_mystère = Math.floor(Math.random() * 100); // Génére un nouveau nombre mystère
     nb_tentative = 0; // Réinitialise le nombre de tentatives
-    step = 4;
+    step = 4; //Retour à l'étape 4
   }
 };
 
