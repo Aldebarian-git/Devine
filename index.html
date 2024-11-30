@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+    <title>Téléshushi</title>
+  </head>
+  <body>
+    <span id="borderTop"
+      >私たちはみんなで一緒に、研修の最後までたどり着きます！頑張りましょう！</span
+    >
+    <span id="borderBottom"
+      >私たちはみんなで一緒に、研修の最後までたどり着きます！頑張りましょう！</span
+    >
+    <span class="material-symbols-outlined" id="volumeUp">volume_up</span>
+    <span class="material-symbols-outlined" id="volumeOff">volume_off</span>
+    <div class="leafs"></div>
+    <div class="lampion"></div>
+    <div class="signature"><h2>Par la promo Sushi.</h2></div>
+    <section id="gameBox">
+      <div class="bulle">
+        <span id="content">Bonjour petit sushi, tu veux jouer avec moi?</span>
+        <input
+          type="text"
+          id="prompt"
+          value=""
+          placeholder="Ton prénom"
+          autocomplete="off"
+        />
+        <input
+          type="text"
+          id="answer"
+          value=""
+          placeholder=""
+          autocomplete="off"
+        />
+        <button id="play">Pourquoi pas !</button>
+      </div>
+      <div id="buble"></div>
+      <div class="sushi"></div>
+    </section>
+
+    <div class="scoreDisplay">
+      <h2>Meilleur joueur : <span id="bestPlayer">SushiMan</span></h2>
+      <h2>Meilleur score : <span id="bestScore">15</span></h2>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

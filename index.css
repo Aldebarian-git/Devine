@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  border-top: solid 70px black;
+  border-bottom: solid 70px black;
+  background-color: rgb(250, 250, 238);
+  position: relative;
+  overflow: hidden;
+  background: url("/Assets/gif\ japan.gif") no-repeat center center;
+  background-size: cover;
+}
+
+@font-face {
+  font-family: "Annie";
+  src: url("Assets/Annie_Use_Your_Telescope/AnnieUseYourTelescope-Regular.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Licorice";
+  src: url("Assets/Licorice/Licorice-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Marker";
+  src: url("Assets/Permanent_Marker/PermanentMarker-Regular.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+#gameBox {
+  position: relative;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 500px;
+  height: 500px;
+}
+
+.bulle {
+  border: 1px solid black;
+  border-radius: 10px;
+  max-height: 35vh;
+  max-width: 35vh;
+  min-height: 28vh;
+  min-width: 28vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  gap: 1rem;
+  font-family: Annie;
+  font-size: clamp(12px, 2.5vw, 26px);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  line-height: 25px;
+  background-color: white;
+  position: absolute;
+  top: 60%;
+  left: 0;
+  transform: translateY(-100%);
+}
+
+#buble {
+  height: 15px;
+  width: 15px;
+  background-color: white;
+  border: 1px solid black;
+  position: absolute;
+  border-radius: 50%;
+  top: 60%;
+  left: 53%;
+  animation: agrandissement 10s infinite ease-in-out;
+}
+
+.sushi {
+  height: 35vh;
+  width: 35vh;
+  background: url("/Assets/Sushi2.png") no-repeat center center;
+  background-size: contain;
+  animation: agrandissement 10s infinite ease-in-out;
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+
+/* Définition de l'animation */
+@keyframes agrandissement {
+  0% {
+    transform: scale(1); /* Taille normale */
+  }
+  50% {
+    transform: scale(1.05); /* Agrandi légèrement */
+  }
+  100% {
+    transform: scale(1); /* Retour à la taille normale */
+  }
+}
+
+#prompt,
+#answer {
+  display: none;
+  border: 1px solid rgb(63, 63, 63);
+  border-radius: 5px;
+  padding: 10px;
+  width: 20vh;
+  height: 5vh;
+}
+
+#play {
+  max-width: 120px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid rgb(63, 63, 63);
+  cursor: pointer;
+  transition: 0.3s ease;
+  background-color: rgb(250, 250, 238);
+}
+#play:hover {
+  transform: scale(1.2);
+  border: 1px solid rgb(250, 133, 133);
+}
+
+.lampion {
+  background: url(/Assets/lampion2.png) center/cover;
+  width: 20vh;
+  height: 20vh;
+  z-index: 1000;
+  position: absolute;
+  top: -4px;
+  right: 7%;
+}
+
+.signature {
+  position: absolute;
+  bottom: 2%;
+  right: 2%;
+  font-family: Licorice;
+  font-weight: 0;
+  color: rgb(199, 199, 199);
+}
+
+#volumeUp,
+#volumeOff {
+  position: absolute;
+  color: rgb(199, 199, 199);
+  right: 2%;
+  top: 2%;
+  cursor: pointer;
+}
+
+#volumeOff {
+  display: none;
+}
+
+.scoreDisplay {
+  font-family: Annie;
+  font-size: 12px;
+  font-weight: 0;
+  position: absolute;
+  bottom: 5%;
+  left: 3%;
+  color: rgb(43, 43, 43);
+  display: none;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+#borderTop,
+#borderBottom {
+  color: rgb(199, 199, 199);
+  font-size: 2rem;
+}
+
+#borderTop {
+  display: inline-block;
+  position: absolute;
+  top: -60px;
+  white-space: nowrap;
+  animation: scrollText 60s linear infinite;
+}
+@keyframes scrollText {
+  0% {
+    transform: translateX(100%); /* Commence à droite, hors de vue */
+  }
+  100% {
+    transform: translateX(-100%); /* Finit à gauche, hors de vue */
+  }
+}
+#borderBottom {
+  display: inline-block;
+  position: absolute;
+  bottom: -60px;
+  white-space: nowrap;
+  animation: scrollText2 60s linear infinite; /* Animation continue */
+}
+@keyframes scrollText2 {
+  0% {
+    transform: translateX(-100%); /* Commence à gauche, hors de vue */
+  }
+  100% {
+    transform: translateX(100%); /* Finit à droite, hors de vue */
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateY(-100%);
+  }
+  25% {
+    transform: translateY(-101%) rotate(-1deg);
+  }
+  50% {
+    transform: translateY(-98%) rotate(0);
+  }
+  75% {
+    transform: translateY(-101%) rotate(+1deg);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.shake {
+  animation: shake 0.5s ease; /* Durée et effet de tremblement */
+}
