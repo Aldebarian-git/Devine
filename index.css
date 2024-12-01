@@ -223,7 +223,7 @@ body {
 }
 @keyframes scrollText {
   0% {
-    transform: translateX(150%); /* Commence à droite, hors de vue */
+    transform: translateX(200%); /* Commence à droite, hors de vue */
   }
   100% {
     transform: translateX(-220%); /* Finit à gauche, hors de vue */
@@ -238,7 +238,7 @@ body {
 }
 @keyframes scrollText2 {
   0% {
-    transform: translateX(-150%); /* Commence à gauche, hors de vue */
+    transform: translateX(-200%); /* Commence à gauche, hors de vue */
   }
   100% {
     transform: translateX(220%); /* Finit à droite, hors de vue */
