@@ -21,6 +21,8 @@ const muteClick = new Audio("./Assets/muteclick.mp3");
 const bestPlayer = document.getElementById("bestPlayer");
 const bestScore = document.getElementById("bestScore");
 const scoreDisplay = document.querySelector(".scoreDisplay");
+const wrongAnswer = new Audio("./Assets/wrong2.mp3");
+const correctAnswer = new Audio("./Assets/correct.mp3");
 
 music.loop = true;
 music.volume = 0.1;
@@ -83,6 +85,7 @@ const ButtonClick = () => {
         setTimeout(() => {
           bulleContainer.classList.remove("shake");
         }, 500);
+        wrongAnswer.play();
       }
     }
     if (parseInt(answerValue) === nb_mystère) {
@@ -101,6 +104,7 @@ const ButtonClick = () => {
         bestScore.textContent = nb_tentative;
         scoreDisplay.style.display = "block";
       }
+      correctAnswer.play();
     }
   } else if (step === 6) {
     bulle.textContent = "Tu as envie de rejouer ?";
