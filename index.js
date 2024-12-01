@@ -48,7 +48,7 @@ const ButtonClick = () => {
     namePrompt.style.display = "none";
     button.textContent = "Il était temps";
     bulle.textContent =
-      "Très bien " + playerName + ", Nous allons pouvoir commencer";
+      "Très bien " + playerName + ", nous allons pouvoir commencer";
     step++;
   } else if (step === 3) {
     bulle.textContent =
@@ -61,7 +61,7 @@ const ButtonClick = () => {
     answerPlayer.style.display = "block";
     answerPlayer.focus();
     bulle.textContent =
-      "Hum..... C'est bon j'ai trouvé ! Alors, selon toi à quel nombre je pense?";
+      "Hum..... C'est bon j'ai trouvé ! Alors, selon toi à quel chiffre/nombre je pense?";
     button.textContent = "Proposer";
     step++;
   } else if (step === 5) {
