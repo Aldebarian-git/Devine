@@ -62,12 +62,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1rem 1rem;
-  gap: 1rem;
+  padding: 2vh 1vw;
+  gap: 1vh;
   font-family: Annie;
-  font-size: clamp(18px, 4.5vw, 45px);
+  font-size: clamp(5px, 3.5vh, 45px);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-  line-height: 40px;
+  line-height: 3vh;
   background-color: white;
   position: absolute;
   top: 60%;
@@ -127,20 +127,20 @@ body {
   padding: 10px;
   width: 15vh;
   height: 3vh;
-  font-size: clamp(18px, 4.5vw, 25px);
+  font-size: clamp(9px, 2.5vh, 25px);
   font-weight: 100;
 }
 
 #play {
   width: auto;
-  padding: 10px;
+  padding: 1vh 1vw;
   max-width: 55%;
   border-radius: 5px;
   border: 1px solid rgb(63, 63, 63);
   cursor: url(./Assets/cursor.ico) 4 28, auto;
   transition: 0.3s ease;
   background-color: rgb(250, 250, 238);
-  font-size: clamp(12px, 2.5vw, 32px);
+  font-size: clamp(9px, 2.5vh, 32px);
   font-family: Annie;
   letter-spacing: 2px;
 }
@@ -169,6 +169,7 @@ body {
   bottom: 2%;
   right: 2%;
   font-family: Licorice;
+  font-size: clamp(9px, 2.5vh, 25px);
   font-weight: 0;
   color: rgb(199, 199, 199);
 }
@@ -203,13 +204,13 @@ body {
 #borderTop,
 #borderBottom {
   color: rgb(199, 199, 199);
-  font-size: clamp(12px, 2.5vh, 32px);
+  font-size: clamp(12px, 2vh, 32px);
 }
 
 #borderTop {
   display: inline-block;
   position: absolute;
-  top: -4vh;
+  top: -4.5vh;
   white-space: nowrap;
   animation: scrollText 60s linear infinite;
 }
@@ -224,7 +225,7 @@ body {
 #borderBottom {
   display: inline-block;
   position: absolute;
-  bottom: -4vh;
+  bottom: -4.5vh;
   white-space: nowrap;
   animation: scrollText2 60s linear infinite; /* Animation continue */
 }
