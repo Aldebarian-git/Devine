@@ -4,7 +4,11 @@
   box-sizing: border-box;
   outline: none;
 }
-
+html {
+  overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
+}
 body {
   display: flex;
   justify-content: center;
@@ -12,8 +16,8 @@ body {
   align-items: center;
   height: 100vh;
   width: 100vw;
-  border-top: solid 4vh black;
-  border-bottom: solid 4vh black;
+  border-top: solid 5vh black;
+  border-bottom: solid 5vh black;
   background-color: rgb(250, 250, 238);
   position: relative;
   overflow: hidden;
@@ -65,7 +69,7 @@ body {
   padding: 2vh 1vw;
   gap: 1vh;
   font-family: Annie;
-  font-size: clamp(5px, 3.5vh, 45px);
+  font-size: clamp(7px, 5vw, 50px);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   line-height: 3vh;
   background-color: white;
@@ -140,7 +144,7 @@ body {
   cursor: url(./Assets/cursor.ico) 4 28, auto;
   transition: 0.3s ease;
   background-color: rgb(250, 250, 238);
-  font-size: clamp(9px, 2.5vh, 32px);
+  font-size: clamp(9px, 2.5vw, 25px);
   font-family: Annie;
   letter-spacing: 2px;
 }
@@ -204,13 +208,13 @@ body {
 #borderTop,
 #borderBottom {
   color: rgb(199, 199, 199);
-  font-size: clamp(12px, 2vh, 32px);
+  font-size: 2vh;
 }
 
 #borderTop {
   display: inline-block;
-  position: absolute;
-  top: -4.5vh;
+  position: fixed;
+  top: 1vh;
   white-space: nowrap;
   animation: scrollText 60s linear infinite;
 }
@@ -224,8 +228,8 @@ body {
 }
 #borderBottom {
   display: inline-block;
-  position: absolute;
-  bottom: -4.5vh;
+  position: fixed;
+  bottom: 1vh;
   white-space: nowrap;
   animation: scrollText2 60s linear infinite; /* Animation continue */
 }
