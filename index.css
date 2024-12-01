@@ -11,18 +11,18 @@ body {
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  border-top: solid 70px black;
-  border-bottom: solid 70px black;
+  border-top: solid 4vh black;
+  border-bottom: solid 4vh black;
   background-color: rgb(250, 250, 238);
   position: relative;
   overflow: hidden;
-  background: url("../Devine/Assets/gif\ japan.gif") no-repeat center center;
+  background: url("./Assets/gif\ japan.gif") no-repeat center center;
   background-size: cover;
 }
 
 @font-face {
   font-family: "Annie";
-  src: url("../Devine/Assets/Annie_Use_Your_Telescope/AnnieUseYourTelescope-Regular.ttf")
+  src: url("./Assets/Annie_Use_Your_Telescope/AnnieUseYourTelescope-Regular.ttf")
     format("truetype");
   font-weight: normal;
   font-style: normal;
@@ -30,14 +30,14 @@ body {
 
 @font-face {
   font-family: "Licorice";
-  src: url("../Devine/Assets/Licorice/Licorice-Regular.ttf") format("truetype");
+  src: url("./Assets/Licorice/Licorice-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Marker";
-  src: url("../Devine/Assets/Permanent_Marker/PermanentMarker-Regular.ttf")
+  src: url("./Assets/Permanent_Marker/PermanentMarker-Regular.ttf")
     format("truetype");
   font-weight: normal;
   font-style: normal;
@@ -45,59 +45,64 @@ body {
 
 #gameBox {
   position: relative;
+  width: 100%;
+  height: 100%;
   margin: auto;
-  display: grid;
-  grid-template-columns: 50% 50%;
-  width: 500px;
-  height: 500px;
+  max-width: 500px;
+  max-height: 500px;
 }
 
 .bulle {
   border: 1px solid black;
   border-radius: 10px;
-  max-height: 35vh;
-  max-width: 35vh;
-  min-height: 28vh;
-  min-width: 28vh;
-  margin: auto;
+  max-height: 80%;
+  max-width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem;
   gap: 1rem;
   font-family: Annie;
-  font-size: clamp(12px, 2.5vw, 26px);
+  font-size: clamp(18px, 4.5vw, 45px);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-  line-height: 25px;
+  line-height: 40px;
   background-color: white;
   position: absolute;
   top: 60%;
   left: 0;
   transform: translateY(-100%);
+  margin: 0rem 1rem;
 }
 
 #buble {
-  height: 15px;
-  width: 15px;
+  height: 1.5vw;
+  width: 1.5vw;
+  min-width: 15px;
+  min-height: 15px;
   background-color: white;
   border: 1px solid black;
   position: absolute;
   border-radius: 50%;
   top: 62%;
-  left: 53%;
+  left: 50%;
   animation: agrandissement 10s infinite ease-in-out;
 }
 
 .sushi {
-  height: 35vh;
-  width: 35vh;
-  background: url("../Devine/Assets/Sushi2.png") no-repeat center center;
+  height: 30vw; /* Taille responsive basée sur la largeur de la fenêtre */
+  width: 30vw;
+  min-width: 15vw; /* Taille minimale */
+  min-height: 15vh;
+  max-width: 35vh;
+  max-height: 35vh;
+  background: url("./Assets/Sushi2.png") no-repeat center center;
   background-size: contain;
   animation: agrandissement 10s infinite ease-in-out;
   position: absolute;
-  top: 50%;
-  right: 0;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centre l'image */
 }
 
 /* Définition de l'animation */
@@ -119,18 +124,24 @@ body {
   border: 1px solid rgb(63, 63, 63);
   border-radius: 5px;
   padding: 10px;
-  width: 20vh;
-  height: 5vh;
+  width: 15vh;
+  height: 3vh;
+  font-size: clamp(18px, 4.5vw, 25px);
+  font-weight: 100;
 }
 
 #play {
-  max-width: 120px;
-  padding: 5px;
+  width: auto;
+  padding: 10px;
+  max-width: 55%;
   border-radius: 5px;
   border: 1px solid rgb(63, 63, 63);
-  cursor: pointer;
+  cursor: url(./Assets/cursor.ico) 4 28, auto;
   transition: 0.3s ease;
   background-color: rgb(250, 250, 238);
+  font-size: clamp(12px, 2.5vw, 32px);
+  font-family: Annie;
+  letter-spacing: 2px;
 }
 #play:hover {
   transform: scale(1.2);
@@ -138,13 +149,18 @@ body {
 }
 
 .lampion {
-  background: url(../Devine/Assets/lampion2.png) center/cover;
-  width: 20vh;
-  height: 20vh;
+  background: url(./Assets/lampion2.png) center/cover;
+  height: 30vw; /* Taille responsive basée sur la largeur de la fenêtre */
+  width: 30vw;
+  min-width: 10vw; /* Taille minimale */
+  min-height: 10vh;
+  max-width: 20vh;
+  max-height: 20vh;
   z-index: 1000;
   position: absolute;
-  top: -4px;
-  right: 7%;
+  top: -0.5vh;
+  left: 50%;
+  transform: translate(-50%);
 }
 
 .signature {
@@ -162,7 +178,7 @@ body {
   color: rgb(199, 199, 199);
   right: 2%;
   top: 2%;
-  cursor: pointer;
+  cursor: url(./Assets/cursor.ico) 4 28, auto;
 }
 
 #volumeOff {
@@ -170,9 +186,8 @@ body {
 }
 
 .scoreDisplay {
-  font-family: Annie;
-  font-size: 12px;
-  font-weight: 0;
+  font-family: Annie, serif;
+  font-size: clamp(9px, 2.5vw, 12px);
   position: absolute;
   bottom: 5%;
   left: 3%;
@@ -187,13 +202,13 @@ body {
 #borderTop,
 #borderBottom {
   color: rgb(199, 199, 199);
-  font-size: 2rem;
+  font-size: clamp(12px, 2.5vh, 32px);
 }
 
 #borderTop {
   display: inline-block;
   position: absolute;
-  top: -60px;
+  top: -4vh;
   white-space: nowrap;
   animation: scrollText 60s linear infinite;
 }
@@ -208,7 +223,7 @@ body {
 #borderBottom {
   display: inline-block;
   position: absolute;
-  bottom: -60px;
+  bottom: -4vh;
   white-space: nowrap;
   animation: scrollText2 60s linear infinite; /* Animation continue */
 }
