@@ -11,6 +11,7 @@ body {
   flex-direction: column;
   align-items: center;
   height: 100vh;
+  width: 100vw;
   border-top: solid 4vh black;
   border-bottom: solid 4vh black;
   background-color: rgb(250, 250, 238);
