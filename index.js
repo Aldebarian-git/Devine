@@ -1,7 +1,7 @@
 let nb_mystère = Math.floor(Math.random() * 100);
 let playerName = "";
 let meilleurJoueur = "Patrick";
-let meilleurScore = 15;
+let meilleurScore = 9999;
 let answer = "";
 let answerValue = 0;
 let nb_tentative = 0;

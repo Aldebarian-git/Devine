@@ -219,14 +219,14 @@ body {
   position: fixed;
   top: 1vh;
   white-space: nowrap;
-  animation: scrollText 60s linear infinite;
+  animation: scrollText 50s linear infinite;
 }
 @keyframes scrollText {
   0% {
-    transform: translateX(100%); /* Commence à droite, hors de vue */
+    transform: translateX(150%); /* Commence à droite, hors de vue */
   }
   100% {
-    transform: translateX(-100%); /* Finit à gauche, hors de vue */
+    transform: translateX(-220%); /* Finit à gauche, hors de vue */
   }
 }
 #borderBottom {
@@ -234,14 +234,14 @@ body {
   position: fixed;
   bottom: 1vh;
   white-space: nowrap;
-  animation: scrollText2 60s linear infinite; /* Animation continue */
+  animation: scrollText2 50s linear infinite; /* Animation continue */
 }
 @keyframes scrollText2 {
   0% {
-    transform: translateX(-100%); /* Commence à gauche, hors de vue */
+    transform: translateX(-150%); /* Commence à gauche, hors de vue */
   }
   100% {
-    transform: translateX(100%); /* Finit à droite, hors de vue */
+    transform: translateX(220%); /* Finit à droite, hors de vue */
   }
 }
 
