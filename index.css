@@ -133,7 +133,7 @@ body {
   max-width: 20vw;
   min-width: 10vw;
   height: 3vh;
-  font-size: clamp(9px, 2.5vh, 25px);
+  font-size: clamp(1vh, 1vw, 2vw);
   font-weight: 100;
 }
 
@@ -195,7 +195,8 @@ body {
 
 .scoreDisplay {
   font-family: Annie, serif;
-  font-size: clamp(1vh, 2vw, 2vw);
+  font-size: clamp(1vh, 1vw, 2vw);
+  max-width: 35vw;
   position: absolute;
   bottom: 5%;
   left: 3%;
