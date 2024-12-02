@@ -19,6 +19,17 @@
     >
     <span class="material-symbols-outlined" id="volumeUp">volume_up</span>
     <span class="material-symbols-outlined" id="volumeOff">volume_off</span>
+    <label for="volume">Volume :</label>
+    <input
+      type="range"
+      id="volume"
+      name="volume"
+      min="0"
+      max="100"
+      value="50"
+      oninput="updateVolume(this.value)"
+    />
+    <span id="volumeValue">50</span>
     <div class="leafs"></div>
     <div class="lampion"></div>
     <div class="signature"><h2>Par la promo Sushi.</h2></div>
