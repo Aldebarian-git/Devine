@@ -52,7 +52,7 @@ const ButtonClick = () => {
     step++;
   } else if (step === 3) {
     bulle.textContent =
-      "Je vais penser très fort à un chiffre/nombre entre 0 et 100, et tu vas devoir le deviner. Tu es pret?";
+      "Je vais penser très fort à un chiffre/nombre entre 0 et 100, et tu vas devoir le deviner. Tu es pret(e)?";
     button.textContent = "Carrement !";
     step++;
   } else if (step === 4) {
