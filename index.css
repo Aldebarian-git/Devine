@@ -49,65 +49,59 @@ body {
 }
 
 #gameBox {
-  position: relative;
   width: 100%;
   height: 100%;
   margin: auto;
-  max-width: 500px;
-  max-height: 500px;
+  position: relative;
 }
 
 .bulle {
   border: 1px solid black;
   border-radius: 10px;
-  width: 25vw;
-  height: 25vh;
+  width: 23%;
+  height: 23%;
+  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2vh 1vw;
-  gap: 1.5vh;
+  padding: 10px;
+  gap: 15px;
   font-family: Annie;
-  font-size: clamp(1vh, 2.5vw, 25px);
+  font-size: clamp(9px, 25px, 50px);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   line-height: 4vh;
   background-color: white;
-  position: absolute;
-  top: 60%;
-  left: 0;
-  transform: translateY(-100%);
-  margin: 0rem 1rem;
+  top: 40%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  min-width: 300px;
 }
 
-#buble {
-  height: 1.5vw;
-  width: 1.5vw;
+#bubble {
+  height: 1vw;
+  width: 1vw;
   min-width: 15px;
   min-height: 15px;
   background-color: white;
   border: 1px solid black;
   position: absolute;
   border-radius: 50%;
-  top: 62%;
-  left: 50%;
+  top: 52%;
+  left: 45%;
   animation: agrandissement 10s infinite ease-in-out;
 }
 
 .sushi {
-  height: 30vw; /* Taille responsive basée sur la largeur de la fenêtre */
-  width: 30vw;
-  min-width: 15vw; /* Taille minimale */
-  min-height: 15vh;
-  max-width: 35vh;
-  max-height: 35vh;
+  height: 30%;
+  width: 30%;
+  min-width: 300px;
   background: url("./Assets/Sushi2.png") no-repeat center center;
   background-size: contain;
   animation: agrandissement 10s infinite ease-in-out;
   position: absolute;
-  top: 57%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Centre l'image */
+  top: 50%;
+  left: 40%;
 }
 
 /* Définition de l'animation */
@@ -129,7 +123,7 @@ body {
   border: 1px solid rgb(63, 63, 63);
   border-radius: 5px;
   height: 4vh;
-  font-size: clamp(1vh, 2.5vw, 25px);
+  font-size: clamp(9px, 16px, 32px);
   text-align: center;
 }
 
@@ -187,8 +181,8 @@ body {
 #volumeOff {
   position: absolute;
   color: rgb(199, 199, 199);
-  right: 2%;
-  top: 2%;
+  right: 3%;
+  top: 3%;
   cursor: url(./Assets/cursor.ico) 4 28, auto;
 }
 
@@ -250,19 +244,37 @@ body {
 
 @keyframes shake {
   0% {
-    transform: translateY(-100%);
+    transform: translate(-50%, -50%) rotate(0deg);
   }
-  25% {
-    transform: translateY(-101%) rotate(-1deg);
+  10% {
+    transform: translate(-47%, -47%) rotate(-3deg);
+  }
+  20% {
+    transform: translate(-53%, -53%) rotate(3deg);
+  }
+  30% {
+    transform: translate(-48%, -48%) rotate(-3deg);
+  }
+  40% {
+    transform: translate(-52%, -52%) rotate(3deg);
   }
   50% {
-    transform: translateY(-98%) rotate(0);
+    transform: translate(-50%, -50%) rotate(0deg);
   }
-  75% {
-    transform: translateY(-101%) rotate(+1deg);
+  60% {
+    transform: translate(-53%, -53%) rotate(-2deg);
+  }
+  70% {
+    transform: translate(-47%, -47%) rotate(2deg);
+  }
+  80% {
+    transform: translate(-51%, -51%) rotate(-1deg);
+  }
+  90% {
+    transform: translate(-49%, -49%) rotate(1deg);
   }
   100% {
-    transform: translateY(-100%);
+    transform: translate(-50%, -50%) rotate(0deg);
   }
 }
 
